@@ -2,6 +2,7 @@
   "name": "epic-react",
   "version": "0.1.0",
   "private": true,
+  "proxy":"http://localhost:5000",
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
@@ -9,6 +10,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "concurrently": "^8.2.1",
     "date-fns": "^2.30.0",
     "json-server": "^0.17.3",
     "react": "^18.2.0",
@@ -21,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server":"json-server --watch db.json --port 5000"
+    "server": "json-server --watch db.json --port 5000",
+    "dev":"concurrently \"npm run server\" \"npm start\" "
   },
   "eslintConfig": {
     "extends": [

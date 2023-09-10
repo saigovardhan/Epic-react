@@ -7,10 +7,8 @@ export const FeedbackForm= ({handleAdd})=>{
     function handleSubmit(e){
         e.preventDefault()
         const NewFeedBackObject = {
-            id:v4(),
             review:newFeedback,
             rating:8
-
         }
         handleAdd(NewFeedBackObject);
         setNewFeedback("")
